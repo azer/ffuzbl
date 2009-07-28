@@ -1,0 +1,8 @@
+.UZBLBottombar { display:none; height:20px; padding:4px; background:#303030;  font:11px Monospace; }
+.UZBLBottombar .UZBLMode { background:khaki; } 
+.UZBLBottombar .UZBLCommandline { font-weight:bold; color:#ff0000; } 
+.UZBLBottombar .UZBLProgressbar { color:#606060; } 
+.UZBLBottombar .UZBLURI { color:#99ff66; } 
+.UZBLBottombar .UZBLName { color:khaki; } 
+.UZBLBottombar .UZBLStatus { color:orange; } 
+.UZBLBottombar .UZBLSelectedURI { color:#606060; } 

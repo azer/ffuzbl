@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://ffuzbl/content/uzbl.css" type="text/css"?>
+<overlay id="uzbl"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/navigation.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/moz-layout.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/uzbl-layout.js"/>
+  <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js" />
+  <vbox id='browser-bottombox'>
+    <html:div id='uzbl-bottombar' class='UZBLBottombar' insertbefore='status-bar'>
+      <span id='uzbl-mode' class='UZBLMode'>[<span class='Char'>C</span>]</span>
+      [<span id='uzbl-commandline' class='UZBLCommandline'>cmd</span>]
+      <span id='uzbl-progressbar' class='UZBLProgressbar'>prg</span>
+      <span id='uzbl-uri' class='UZBLURI'>pr</span>
+      <span id='uzbl-name' class='UZBLName'>nm</span>
+      <span id='uzbl-status' class='UZBLStatus'>st</span>
+      <span id='uzbl-selected-uri' class='UZBLSelectedURI'>su</span>
+    </html:div>
+  </vbox>
+</overlay>
