@@ -6,3 +6,8 @@
 .UZBLBottombar .UZBLName { color:khaki; } 
 .UZBLBottombar .UZBLStatus { color:orange; } 
 .UZBLBottombar .UZBLSelectedURI { color:#606060; } 
+
+.UZBLTabbar { display:none; height:20px; padding:4px; background:#303030;  font:11px Monospace; }
+.UZBLTabbar .UZBLTab { color:#888; }
+.UZBLTabbar .UZBLTab .UZBLTabTitle { color:#bbb; padding:0 5px 0 5px }
+.UZBLTabbar .UZBLTabSelected .UZBLTabTitle { color:rgb(100,255,0); }

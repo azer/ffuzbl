@@ -14,8 +14,6 @@
         <em:maxVersion>3.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-
-    <!-- Front End MetaData -->
     <em:name>FFUZBL</em:name>
     <em:description>A mozilla extension that changes firefox toolbars with simple uzbl toolbars.</em:description>
     <em:creator>Azer Koculu</em:creator>

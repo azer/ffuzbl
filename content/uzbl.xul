@@ -7,11 +7,21 @@
   <script type="application/x-javascript" src="chrome://ffuzbl/content/moz-layout.js"/>
   <script type="application/x-javascript" src="chrome://ffuzbl/content/uzbl-layout.js"/>
   <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js" />
+  <window id='main-window'>
+    <html:div id='uzbl-tabbar' class='UZBLTabbar' insertbefore='navigator-toolbox'>
+      <span id='uzbl-tab-0' class='UZBLTab'>
+       [ <span class='UZBLTabID'>0</span><span class='UZBLTabTitle'>Error</span> ]
+      </span>
+      <span id='uzbl-tab-1' class='UZBLTab UZBLTabSelected'>
+       [ <span class='UZBLTabID'>1</span><span class='UZBLTabTitle'>Error</span> ]
+      </span>
+    </html:div>
+  </window>
   <vbox id='browser-bottombox'>
     <html:div id='uzbl-bottombar' class='UZBLBottombar' insertbefore='status-bar'>
       <span id='uzbl-mode' class='UZBLMode'>[<span class='Char'>C</span>]</span>
       [<span id='uzbl-commandline' class='UZBLCommandline'>cmd</span>]
-      <span id='uzbl-progressbar' class='UZBLProgressbar'>prg</span>
+      <span id='uzbl-progressbar' class='UZBLProgressbar'>=========</span>
       <span id='uzbl-uri' class='UZBLURI'>pr</span>
       <span id='uzbl-name' class='UZBLName'>nm</span>
       <span id='uzbl-status' class='UZBLStatus'>st</span>
