@@ -1,4 +1,4 @@
-.UZBLBottombar { display:none; height:20px; padding:4px; background:#303030;  font:11px Monospace; }
+.UZBLBottombar { height:20px; padding:4px; background:#303030;  font:11px Monospace; }
 .UZBLBottombar .UZBLMode { background:khaki; } 
 .UZBLBottombar .UZBLCommandline { font-weight:bold; color:#ff0000; } 
 .UZBLBottombar .UZBLProgressbar { color:#606060; } 
@@ -6,8 +6,9 @@
 .UZBLBottombar .UZBLName { color:khaki; } 
 .UZBLBottombar .UZBLStatus { color:orange; } 
 .UZBLBottombar .UZBLSelectedURI { color:#606060; } 
+//.UZBLBottombar .UZBLCommandLineInput { display:none; }
 
-.UZBLTabbar { display:none; height:20px; padding:4px; background:#303030;  font:11px Monospace; }
+.UZBLTabbar { height:20px; padding:4px; background:#303030;  font:11px Monospace; }
 .UZBLTabbar .UZBLTab { color:#888; }
 .UZBLTabbar .UZBLTab .UZBLTabTitle { color:#bbb; padding:0 5px 0 5px }
 .UZBLTabbar .UZBLTabSelected .UZBLTabTitle { color:rgb(100,255,0); }

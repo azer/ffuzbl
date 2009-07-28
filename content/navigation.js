@@ -18,6 +18,7 @@ function enable(){
   hide_moz_ui();
   update_uzbl_ui();
   show_uzbl_ui();
+  set_input_focus();
   is_enabled = true;
 }
 
