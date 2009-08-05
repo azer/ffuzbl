@@ -7,8 +7,6 @@ function init(){
   uzbl_bottombar = new Bottombar();
   uzbl_tabbar = new Tabbar();
   enable();
-
-  $('uzbl-input').collapsed = true;
 }
 addEventListener('load',init,false);
 //

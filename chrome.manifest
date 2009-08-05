@@ -1,2 +1,3 @@
 content     ffuzbl    chrome/content/
+skin     ffuzbl  classic  chrome/skin/
 overlay chrome://browser/content/browser.xul chrome://ffuzbl/content/uzbl.xul
