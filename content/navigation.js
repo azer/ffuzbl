@@ -4,21 +4,19 @@ function navigate(event_obj){
   var
     keyCode = event_obj.keyCode,
     charCode = event_obj.charCode
-    ;
+  ;
 
   switch(keyCode){
     case 120:
       toggle();
       break;
   }
-
 }
 
 function enable(){
   hide_moz_ui();
-  update_uzbl_ui();
   show_uzbl_ui();
-  set_input_focus();
+  commander.reset();
   is_enabled = true;
 }
 
@@ -35,4 +33,6 @@ function toggle(){
     enable();
 }
 
-addEventListener('keypress',navigate,false);
+function init_navigator(){
+  addEventListener('keypress',navigate,false);
+}

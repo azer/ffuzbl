@@ -3,12 +3,14 @@
 .UZBLBottombar .UZBLCommandline { font-weight:bold; color:#ff0000; } 
 .UZBLBottombar .UZBLProgressbar { color:#606060; } 
 .UZBLBottombar .UZBLURI { color:#99ff66; } 
-.UZBLBottombar .UZBLName { color:khaki; } 
+.UZBLBottombar .UZBLIP { color:khaki; } 
 .UZBLBottombar .UZBLStatus { color:orange; } 
-.UZBLBottombar .UZBLSelectedURI { color:#606060; } 
-//.UZBLBottombar .UZBLCommandLineInput { display:none; }
+.UZBLBottombar .UZBLHint { color:#606060; }
 
-.UZBLTabbar { height:20px; padding:4px; background:#303030;  font:11px Monospace; }
-.UZBLTabbar .UZBLTab { color:#888; }
-.UZBLTabbar .UZBLTab .UZBLTabTitle { color:#bbb; padding:0 5px 0 5px }
-.UZBLTabbar .UZBLTabSelected .UZBLTabTitle { color:rgb(100,255,0); }
+.UZBLTabbar { padding:4px; overflow:visible; white-space:inherit; background:#303030; font:11px Monospace; }
+.UZBLTabbar .UZBLTab { height:15px; overflow:hidden; color:#888; }
+.UZBLTabbar .UZBLTab .UZBLTabLabel { color:#bbb; padding:0 5px 0 5px }
+.UZBLTabbar .UZBLTabSelected { color:#aaa; }
+.UZBLTabbar .UZBLTabSelected .UZBLTabLabel { color:rgb(100,255,0); }
+
+.UZBLInput { position:absolute; width:0px; height:0px; border:0; margin:0; padding:0; font-size:0px; }

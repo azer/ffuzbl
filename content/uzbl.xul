@@ -2,31 +2,46 @@
 <?xml-stylesheet href="chrome://ffuzbl/content/uzbl.css" type="text/css"?>
 <overlay id="uzbl"
   xmlns:html="http://www.w3.org/1999/xhtml"
-  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js" />
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  >
+
+  <!--
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/logger.js"/>
+  -->
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/ffuzbl.js"/>
+    
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/tabbar.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/tab.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/progress_listener.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/bottombar.js"/>
+
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/commands.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/commander.js"/>
+  <script type="application/x-javascript" src="chrome://ffuzbl/content/cmd_map.js"/>
+
+
   <script type="application/x-javascript" src="chrome://ffuzbl/content/navigation.js"/>
   <script type="application/x-javascript" src="chrome://ffuzbl/content/moz-layout.js"/>
   <script type="application/x-javascript" src="chrome://ffuzbl/content/uzbl-layout.js"/>
+
+  <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js" />
   <window id='main-window'>
     <html:div id='uzbl-tabbar' class='UZBLTabbar' insertbefore='navigator-toolbox'>
-      <span id='uzbl-tab-0' class='UZBLTab'>
-       [ <span class='UZBLTabID'>0</span><span class='UZBLTabTitle'>Error</span> ]
-      </span>
-      <span id='uzbl-tab-1' class='UZBLTab UZBLTabSelected'>
-       [ <span class='UZBLTabID'>1</span><span class='UZBLTabTitle'>Error</span> ]
-      </span>
+        <html:div id="uzbl-tabbar-content" />
     </html:div>
   </window>
   <vbox id='browser-bottombox'>
     <html:div id='uzbl-bottombar' class='UZBLBottombar' insertbefore='status-bar'>
       <span id='uzbl-mode' class='UZBLMode'>[<span class='Char'>C</span>]</span>
-      [<span id='uzbl-commandline' class='UZBLCommandline'>cmd</span>]
-      <span id='uzbl-progressbar' class='UZBLProgressbar'>=========</span>
-      <span id='uzbl-uri' class='UZBLURI'>pr</span>
-      <span id='uzbl-name' class='UZBLName'>nm</span>
-      <span id='uzbl-status' class='UZBLStatus'>st</span>
-      <span id='uzbl-selected-uri' class='UZBLSelectedURI'>su</span>
-      <html:input type='text' id='uzbl-input' class='UZBLCommandLineInput' value='' />
+      [<span class='UZBLCommandline'><text id='uzbl-commandline' value='' /></span>]
+      <span id='uzbl-progressbar' class='UZBLProgressbar'>.......</span>
+      <span class='UZBLURI'><text id="uzbl-uri" /></span>
+      <span class='UZBLIP'><text id="uzbl-tab-ip" /></span>
+      <span class='UZBLStatus'><text id='uzbl-status' /></span>
+      <span class='UZBLHint'><text id='uzbl-hint' /></span>
+
     </html:div>
+       <html:input id='uzbl-input' class='UZBLInput' collapsed='true' />
   </vbox>
+
 </overlay>
