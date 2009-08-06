@@ -53,9 +53,11 @@ Bottombar.prototype = {
   },
   'hide':function(){
     this.container_element.style.display = 'none';
+    this.input_element.style.display = 'none';
   },
   'show':function(){
     this.container_element.style.display = 'block';
+    this.input_element.style.display = 'block';
   },
   'handle_hints':function(aEvent){
     if(!is_enabled)

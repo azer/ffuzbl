@@ -6,7 +6,6 @@ function init(){
   commander.init();
   uzbl_bottombar = new Bottombar();
   uzbl_tabbar = new Tabbar();
-  enable();
 }
 addEventListener('load',init,false);
 //

@@ -29,9 +29,7 @@
     <html:div id='uzbl-tabbar' class='UZBLTabbar' insertbefore='navigator-toolbox'>
         <html:div id="uzbl-tabbar-content" />
     </html:div>
-  </window>
-  <vbox id='browser-bottombox'>
-    <html:div id='uzbl-bottombar' class='UZBLBottombar' insertbefore='status-bar'>
+    <html:div id='uzbl-bottombar' class='UZBLBottombar' insertbefore='browser-bottombox'>
       <span id='uzbl-mode' class='UZBLMode'>[<span class='Char'>C</span>]</span>
       [<span class='UZBLCommandline'><text id='uzbl-commandline' value='' /></span>]
       <span id='uzbl-progressbar' class='UZBLProgressbar'>.......</span>
@@ -41,7 +39,7 @@
       <span class='UZBLHint'><text id='uzbl-hint' /></span>
 
     </html:div>
-       <html:input id='uzbl-input' class='UZBLInput' collapsed='true' />
-  </vbox>
+    <html:input id='uzbl-input' class='UZBLInput' insertafter='uzbl-bottombar' />
+  </window>
 
 </overlay>

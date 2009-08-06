@@ -9,7 +9,6 @@ function Tabbar(){
       this.create_tab(null,this.firefox_tab_container.childNodes[i]);
     }
 
-    this.container_element.style.display ='block';
   }
   this.firefox_tab_container.addEventListener("TabSelect", curry(this.select_tab,this), true);
   this.firefox_tab_container.addEventListener("TabClose", curry(this.close_tab,this), true);
