@@ -1,7 +1,7 @@
 const
   COMMANDER_FOCUS_KEYCODE = 27,
   COMMANDER_EXECUTE_KEYCODE = 13,
-  DEBUG = true,
+  DEBUG = false,
   START_ENABLED = true,
   SHOW_HINT = true
 ;
