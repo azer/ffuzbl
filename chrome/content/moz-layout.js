@@ -1,8 +1,15 @@
 var
-  toolbox = $('navigator-toolbox'),
-  bottombox = $('browser-bottombox'),
-  statusbar = $('status-bar')
+  toolbox = null,
+  bottombox = null,
+  statusbar = null
 ;
+
+function init_moz_layout(){
+  toolbox = $('navigator-toolbox');
+  bottombox = $('browser-bottombox');
+  statusbar = $('status-bar');
+}
+
 function hide_moz_ui(){
   toolbox.collapsed = true;
   statusbar.collapsed = true;

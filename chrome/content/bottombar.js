@@ -11,8 +11,10 @@ function Bottombar(){
   addEventListener('keypress',commander.navigate,false);
   this.input_element.addEventListener('keyup',commander.listenInput,false);
 
-  $('browser').addEventListener('mousemove',curry(this.handle_hints,this),false);
-  $('browser').addEventListener('mouseout',curry(this.set_hint,this,''), false );
+  if(SHOW_HINT){
+    $('browser').addEventListener('mousemove',curry(this.handle_hints,this),false);
+    $('browser').addEventListener('mouseout',curry(this.set_hint,this,''), false );
+  }
 }
 Bottombar.prototype = {
   // properties
@@ -32,10 +34,10 @@ Bottombar.prototype = {
     this.status_element.setAttribute('value',msg);
   },
   'set_uri':function(uri){
-    this.uri_element.setAttribute('value',cut_str(uri,50));
+    this.uri_element.setAttribute('value',cut_str(uri,40));
   },
   'set_hint':function(text){
-    this.hint_element.setAttribute('value',cut_str(text,50));
+    this.hint_element.setAttribute('value',cut_str(text,40));
   },
   'set_progress_value':function(percentage){
     var

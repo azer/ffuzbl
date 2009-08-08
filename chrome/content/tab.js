@@ -53,15 +53,15 @@ Tab.prototype  = {
     this.label_element.childNodes[0].nodeValue = val;
   },
   get ip(){
-    return this._uri.host&&resolve_ip(this._uri.host)||"0.0.0.0";
+    var ip = '0.0.0.0';
+    try {
+      ip=resolve_ip(this.uri.host);
+    } catch(e){}
+    return ip;
   },
   get uri(){
-    return this._uri.spec||this._uri;
+    return this.browser.currentURI;
   },
-  set uri(val){
-    this._uri = val;
-  },
-  '_uri':'about:blank',
   'tabbar':null,
   'index':0,
   'load_percent':0,
@@ -105,18 +105,14 @@ Tab.prototype  = {
     this.refresh();
   },
   'refresh':function(){
-    log('---------------');
-    log(Number(new Date));
-    log("refreshing tab#"+this.id+" isSelected?"+this.selected);
+    log('refresing tab: selected/ip/loadpercent/uri/msg',this.selected,this.ip,this.load_percent,this.uri.spec,this.status_msg);
     this.title = cut_str(this.label, this.tabbar.label_width);
     if(this.selected){
-      log(this.ip,this.load_percent,this.uri,this.status_msg);
       uzbl_bottombar.set_ip(this.ip);
       uzbl_bottombar.set_progress_value(this.load_percent);
-      uzbl_bottombar.set_uri(this.uri);
+      uzbl_bottombar.set_uri(this.uri.spec);
       uzbl_bottombar.set_status_msg(this.status_msg);
     }
-    log('..............');
   },
   'remove':function(){
     this.tabbar.content_element.removeChild(this.container_element);

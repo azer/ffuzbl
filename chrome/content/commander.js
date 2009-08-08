@@ -10,14 +10,14 @@ var commander = {
       ;
     switch(keyCode){
       // esc
-      case 27:
+      case COMMANDER_FOCUS_KEYCODE:
         commander.reset();
         break;
     }
   },
   listenInput:function(event_args){
     var keyCode = event_args.keyCode;
-    if(keyCode==13){
+    if(keyCode==COMMANDER_EXECUTE_KEYCODE){
       commander.execute( uzbl_bottombar.input_element.value );
       commander.reset();
     } else {

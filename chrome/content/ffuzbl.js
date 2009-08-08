@@ -1,13 +1,17 @@
 const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
-
 //
-function init(){
+var ffuzbl = {};
+ffuzbl.init = function(){
+  init_moz_layout();
   init_navigator();
   commander.init();
   uzbl_bottombar = new Bottombar();
   uzbl_tabbar = new Tabbar();
+
+  if(START_ENABLED)
+    setTimeout(enable,100);
 }
-addEventListener('load',init,false);
+addEventListener('load',ffuzbl.init,false);
 //
 
 
@@ -54,5 +58,3 @@ function resolve_ip(host){
   }
   return ip;
 }
-
-window.log = window.log||new Function('');

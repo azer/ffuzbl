@@ -2,10 +2,13 @@ const STATE_START = Components.interfaces.nsIWebProgressListener.STATE_START;
 const STATE_STOP = Components.interfaces.nsIWebProgressListener.STATE_STOP;
 
 var ProgressListener = function(tab){
- this.tab = tab;
+ this._tab = tab;
 }
 ProgressListener.prototype  = {
-  tab:null,
+  _tab:null,
+  get tab(){
+    return this._tab||uzbl_tabbar.active_tab;
+  },
   QueryInterface: function(aIID){
     if (   aIID.equals(Components.interfaces.nsIWebProgressListener) ||
            aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
@@ -22,10 +25,7 @@ ProgressListener.prototype  = {
       this.tab.refresh();
     }
   },
-  onLocationChange:function(aProgress,aRequest,aURI){
-    log('EV.LOC',aURI.spec);
-    this.tab.uri = aURI;
-  },
+  onLocationChange:function(aProgress,aRequest,aURI){},
   onProgressChange:function(aWebProgress,aRequest,aCurSelf,aMaxSelf,aCurTotal,aMaxTotal){
     log('EV.PRG',aCurTotal,aMaxTotal);
     this.tab.load_percent = Math.round((aCurTotal* 100) / aMaxTotal);

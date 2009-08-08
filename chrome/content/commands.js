@@ -22,7 +22,9 @@ commands.open_about = function(){
 
 commands.open_url = function(){
   var url= Array.prototype.join.call(arguments,' ');
-  openUILink(url);
+  log(url);
+  gURLBar.value = url;
+  gURLBar.handleCommand();
 }
 commands.open_url_in_new_tab = function(url){
   gBrowser.selectedTab = gBrowser.addTab(url||'about:blank');

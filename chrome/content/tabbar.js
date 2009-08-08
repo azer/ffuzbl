@@ -50,6 +50,7 @@ Tabbar.prototype = {
     fftab = fftab||aEvent.target;
     var tab = new Tab(this,fftab);
     this.content_element.appendChild( tab.container_element );
+    tab.refresh();
     this.refresh();
   },
   'refresh':function(){
@@ -59,6 +60,7 @@ Tabbar.prototype = {
   },
   'close_tab':function(aEvent){
     aEvent.target.uzbl_tab.remove();
+    this.refresh();
   },
   'select_tab':function(aEvent,fftab){
     fftab = fftab||aEvent.target;
@@ -70,6 +72,7 @@ Tabbar.prototype = {
   },
   'show':function(){
     this.container_element.style.display = 'block';
+    this.active_tab.refresh();
   },
   'hide':function(){
     this.container_element.style.display = 'none';
